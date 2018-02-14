@@ -1,5 +1,5 @@
 import express from 'express';
-import linebot from './linebot.route'
+import linebot from './linebot.route';
 import config from './../../config/config';
 
 const router = express.Router();
@@ -11,8 +11,6 @@ router.get('/', (req, res) => {
 });
 /** linebot Router */
 router.use('/webhook', linebot);
-
-
 
 
 export default router;

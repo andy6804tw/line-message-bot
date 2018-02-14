@@ -1,6 +1,6 @@
 import express from 'express';
 import linebot from 'linebot';
-import linebotCtrl from '../controllers/linebot.controller'
+import messageCtrl from '../controllers/message.controller';
 import config from './../../config/config';
 
 // config
@@ -16,7 +16,7 @@ const router = express.Router();
 router.use(bot.parser());
 
 // reply text message
-bot.on('message', linebotCtrl.replyMessage);
+bot.on('message', messageCtrl.replyMessage);
 
 
 export default router;
